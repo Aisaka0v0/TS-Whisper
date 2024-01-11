@@ -4,7 +4,7 @@
 @Project ：TS_Whisper 
 @File    ：prompting.py
 @IDE     ：PyCharm 
-@Author  ：Aisaka/Hao Ma @SDU
+@Author  ：Hao Ma@SDU
 @Date    ：2023/12/18 下午3:54 
 '''
 import torch
