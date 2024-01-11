@@ -7,7 +7,21 @@ Install `Python >= 3.8` and `Pytorch >=2.1.0`. Then, install Whipser through the
 ```
 pip install -U openai-whisper
 ```
-## Get the Speaker Embedding
+## Data preparing
+### 1. Create speech mixtures
+Following [LibriMix](https://github.com/JorisCos/LibriMix) to create speech mixtures
+### 2. Generate meta data
+
+```
+cd ./data_utils
+python create_data.py
+--transcript-file ./audio_text.json
+--data-file your_libriMix_directory/Libri2Mix/wav16k/max/metadata/mixture_train-100_mix_clean.csv
+--output ./data/train-100.json
+```
+Also change `--data_file` to `mixture_train-100_mix_both.csv` to create `train-100-noisy.json`; to `mixture_test_mix_clean.csv` to create `test.json`; to `mixture_test_mix_both.csv` to create `test-noisy.json`
+
+### Get the Speaker Embedding
 
 Follow this [repo](https://github.com/HuangZiliAndy/SSL_for_multitalker) to get speaker embeddings. Download the pre-extracted x-vector embeddings and put all the `.npy` files into one directory.
 
