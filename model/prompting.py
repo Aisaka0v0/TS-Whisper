@@ -75,7 +75,8 @@ class Prompting(nn.Module):  # basic prompt tuning
                     self.soft_prompt_extra_encoder.data[i, :, :] = self.mlp_encoder[i](self.soft_prompt_extra_encoder[i, :, :])
                     self.soft_prompt_extra_decoder.data[i, :, :] = self.mlp_decoder[i](self.soft_prompt_extra_decoder[i, :, :])
             del self.mlp_encoder, self.mlp_decoder
-            # cal #param.
+            self.use_mlp = False
+            # cal params
             total = sum([param.nelement() for param in self.parameters()])
             print('Number of parameter: % .4fM' % (total / 1e6))
             return self
