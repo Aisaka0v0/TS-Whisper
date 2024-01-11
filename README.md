@@ -45,7 +45,7 @@ pip install loralib
 Then, check `train_lora.py` and `evaluation_lora.py`. The usage is the same as prompt tuning scripts.
 # Citation
 ```
-@inproceedings{huang2023adapting,
+@inproceedings{ts_whisper,
   title={Extending Whisper with prompt tuning to target-speaker ASR},
   author={Ma, Hao and Peng, Zhiyuan and Shao, Mingjie and Li, Jing and Liu, Ju},
   booktitle={IEEE ICASSP},
