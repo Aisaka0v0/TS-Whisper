@@ -24,8 +24,6 @@ from model.prompting import Prompting
 import os
 from whisper.model import ResidualAttentionBlock
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
-
 
 def get_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Fine-tune a Whisper model for ASR")
