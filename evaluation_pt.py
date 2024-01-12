@@ -7,15 +7,7 @@
 @Author  ：Aisaka/Hao Ma @SDU
 @Date    ：2023/12/19 下午12:28 
 '''
-# !/usr/bin/env python
-# -*- coding: UTF-8 -*-
-'''
-@Project ：TS_Whisper 
-@File    ：evaluation_pt.py
-@IDE     ：PyCharm 
-@Author  ：Aisaka/Hao Ma @SDU
-@Date    ：2023/12/18 下午9:00 
-'''
+
 from whisper.decoding import DecodingTask
 from model.prompting import Prompting, Prompting_len0
 import argparse
@@ -29,8 +21,6 @@ from tqdm import tqdm
 from whisper.normalizers import EnglishTextNormalizer
 from whisper.model import ResidualAttentionBlock
 
-
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
 
 
 def get_parser() -> argparse.ArgumentParser:
