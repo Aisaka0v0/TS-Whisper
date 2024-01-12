@@ -22,7 +22,7 @@ from data_utils.dataloader import get_dataloader
 from model.prompting import Prompting, Prompting_len0
 import os
 import loralib as lora
-os.environ['CUDA_VISIBLE_DEVICES'] = '5'
+
 
 
 def get_parser() -> argparse.ArgumentParser:
