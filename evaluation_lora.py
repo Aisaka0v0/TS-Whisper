@@ -20,8 +20,6 @@ from tqdm import tqdm
 from whisper.normalizers import EnglishTextNormalizer
 import loralib as lora
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '5'
-
 
 def get_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Test script")
