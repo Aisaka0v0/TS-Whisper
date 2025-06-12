@@ -36,7 +36,7 @@ python training_pt.py
 --deep 
 --use_mlp
 --prompt_length 16 
---batch_size 1
+--batch-size 1
 ```
 where the `--deep` flag specifies whether to use deep prompting and the `--use_mlp` flag specifies whether to use re-parameterisation MLP.
 
