@@ -29,7 +29,7 @@ Follow this [repo](https://github.com/HuangZiliAndy/SSL_for_multitalker) to get 
 ## Training
 
 ```
-Python training_pt.py 
+python training_pt.py 
 --model large-v2 
 --exp_name example 
 --embed_path directory_to_embeddings 
