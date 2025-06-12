@@ -171,20 +171,9 @@ class AudioDataset(Dataset):
         embed_path = self.embed_path + record.prompt.split('-')[0]+'.npy'
         xvec = torch.tensor(np.load(embed_path), dtype=torch.float).squeeze()
         if self.dev:
-            return (
-                mel,
-                xvec,
-                torch.tensor(decoder_input, dtype=torch.long),
-                torch.tensor(decoder_output, dtype=torch.long),
-                record.text
-            )
+            return mel, xvec, torch.tensor(decoder_input, dtype=torch.long), torch.tensor(decoder_output, dtype=torch.long), record.text
         else:
-            return (
-                mel,
-                xvec,
-                torch.tensor(decoder_input, dtype=torch.long),
-                torch.tensor(decoder_output, dtype=torch.long),
-            )
+            return mel, xvec, torch.tensor(decoder_input, dtype=torch.long), torch.tensor(decoder_output, dtype=torch.long)
 
 
 def collate_fn(data):
