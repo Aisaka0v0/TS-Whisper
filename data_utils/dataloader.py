@@ -177,7 +177,7 @@ class AudioDataset(Dataset):
 
 
 def collate_fn(data):
-    if len(data) == 4:
+    if len(data[0]) == 4:
         x, xvec, y_in, y_out = zip(*data)
         x = pad_sequence(x, batch_first=True, padding_value=0)
         xvec = torch.stack(xvec)
