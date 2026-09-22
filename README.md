@@ -66,3 +66,29 @@ Then, check `train_lora.py` and `evaluation_lora.py`. The usage is the same as p
   year={2024},
 }
 ```
+
+## License
+
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE).
+
+### Third-party code and compliance
+
+TS-Whisper builds on, and in places adapts, code from OpenAI Whisper. The full
+attribution notices and reproduced license texts are in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+| Component | How it is used | License |
+|---|---|---|
+| [OpenAI Whisper](https://github.com/openai/whisper) (`openai-whisper`) | Runtime dependency (`import whisper`), plus adapted fine-tuning/data code | MIT |
+| [Microsoft LoRA](https://github.com/microsoft/LoRA) (`loralib`) | Runtime dependency for LoRA tuning | MIT |
+
+Specifically, `data_utils/create_data.py`, `data_utils/dataloader.py` and the
+training/evaluation entry points are adapted from OpenAI's Whisper
+fine-tuning recipe and reuse substantial portions of Whisper's tokenizer,
+audio and decoding logic. The OpenAI Whisper MIT copyright and permission
+notice is therefore reproduced in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), as required by the MIT
+License.
+
+Because both this project and its upstream dependencies are under MIT, the
+licensing is uniform and fully compliant.
